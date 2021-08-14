@@ -1,0 +1,17 @@
+{  
+  "manifest_version": 2,
+
+  "name": "CountWord",
+  "description": "This extension counts word which you want to know how many word in this webpage.",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+      "activeTab",
+      "storage"
+  ]
+}
