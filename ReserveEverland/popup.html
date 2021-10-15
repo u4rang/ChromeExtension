@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="uft-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+
+    <title>Everland Macro</title>
+
+    <style>
+        html,
+        body {
+            width : 200px;
+            height : auto;
+            margin : 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .app {
+            padding: 16px;
+        }
+
+        .app-title {
+            margin: 0 0 16px 0;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            padding-bottom: 4px;
+            color: rgba(0, 0, 0, .76);
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 18px;
+            border: 1px solid #dddddd;
+            padding: 0 8px;
+            margin-bottom: 16px;
+        }
+
+        select {
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 18px;
+            border: 1px solid #dddddd;
+            padding: 0 8px;
+            margin-bottom: 16px;
+        }
+
+        .actions {
+            text-align: right;
+        }
+
+        .button {
+            padding: 0 16px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            background-color: rgb(0, 140, 255);
+            color: #ffffff;
+            border-radius: 4px;
+            margin-left: 8px;
+            display: line-block;
+        }
+
+        #message {
+            height: 40px;
+            color: rgba(0, 0, 0, .76);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h2 class="app-title">예약정보 입력</h2>
+        <div class="form">
+            <lable for="email">Email</lable>
+            <input type="text" id="email">
+
+            <lable for="phone">Phone</lable>
+            <input type="text" id="phone">
+
+            <lable for="Date">Date</lable>
+            <input type="date" id="date">
+
+            <lable for="Amount">Amount</lable>
+            <select name="amount" id="amount">
+                <option value="">-- 선택 --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div id="message"></div>
+        <div class="actions">
+            <button type="button" class="button" id="button-reset">초기화</button>
+            <button type="button" class="button" id="button-save">저장</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
