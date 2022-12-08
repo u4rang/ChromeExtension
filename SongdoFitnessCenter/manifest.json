@@ -1,0 +1,29 @@
+{
+    "name" : "Songdo Fitness Center",
+    "description" : "This extension is to add program in cart automatically.",
+    "version" : "1.0",
+    "manifest_version" : 3,
+
+    "permissions" : [
+        "storage",
+        "activeTab",
+        "nativeMessaging",
+        "https://songdo.ysfsmc.or.kr/"
+    ],
+
+    "action" : {
+        "default_icon" : "icon.png",
+        "icon" : "icon.png",
+        "default_popup" : "popup.html"
+    },
+
+    "content_scripts" : [
+        {
+            "all_frames" : true,
+            "js" : ["content.js"],
+            "css" : ["content.css"],
+            "matches" : ["https://songdo.ysfsmc.or.kr/application/*"],
+            "run_at" : "document_idle"
+        }
+    ]
+}

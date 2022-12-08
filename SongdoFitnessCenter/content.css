@@ -1,0 +1,14 @@
+.macro-button {
+    width: 175px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #f2f4f5;
+    background: -webkit-linear-gradient(to bottom, #eee849, #f46b45);
+    color: #224d8a;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #224d8a;
+    cursor: pointer;
+    padding: 2px 6px 4px 6px;
+}
