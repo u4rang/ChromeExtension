@@ -67,7 +67,7 @@ const macroStart = () => {
     let milliseconds = today.getMilliseconds(); // 밀리초
 
     let serverDate = new Date(year, month - 1, date, hours, minutes, seconds, milliseconds);    // 서버 시간 Date 객체 생성
-    let tgtDate = new Date(year, month - 1, date, 09, 00, 00);                                  // 09시 사이트 오픈
+    let tgtDate = new Date(year, month - 1, date, 08, 00, 00);                                  // 09시 사이트 오픈
 
     let timer = tgtDate.getTime() - serverDate.getTime();                                       // 서버 시간과 목표 시간의 차이 계산
 
@@ -96,12 +96,12 @@ const macroStart = () => {
 
     alert(MSG_MACRO_START);
 
-    document.querySelector(".sub-Right h3").innerHTML = MSG_MACRO_ING;
+    document.querySelector(".sub-Right h3").innerHTML = MSG_MACRO_ING + " / 신청 강좌 : " + subject1Name + (subject2Name === "" ? "" : " | " + subject2Name);
 
-    document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div.nth-child(5) > span:nth-child(1)").innerHTML = "신청 강좌 : " + subject1Name + (subject2Name === "" ? "" : " | " + subject2Name);
+    //document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div.nth-child(5) > span:nth-child(1)").innerHTML = "신청 강좌 : " + subject1Name + (subject2Name === "" ? "" : " | " + subject2Name);
 
     setInterval(() => {
-        document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div.nth-child(5) > span:nth-child(4)").innerHTML = ("남은 시간(ms) : " + (tgtDate.getTime() - (new Date()).getTime()).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+        document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div > span").innerHTML = ("남은 시간(ms) : " + (tgtDate.getTime() - (new Date()).getTime()).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
     }, 100);
 }
 
@@ -169,3 +169,5 @@ const addCart = (g_idx, qty, target_cd) => {
         console.error('실패 : ', error);
     });
 }
+
+// https://songdo.ysfsmc.or.kr/application/applicationList.asp?bascd=03&scitem=030002
