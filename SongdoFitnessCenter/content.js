@@ -12,6 +12,7 @@ let subjects = {
     "010000050" : "수영/화목/상급/07시",
     "010000001" : "수영/월수금/고급/06시",
     "030000032" : "베드민턴/월수금/06시",
+    "030000052" : "베드민턴/월수금/07시",
     "010000014" : "아쿠아로빅/화목/12시",
 }
 
@@ -100,9 +101,9 @@ const macroStart = () => {
 
     //document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div.nth-child(5) > span:nth-child(1)").innerHTML = "신청 강좌 : " + subject1Name + (subject2Name === "" ? "" : " | " + subject2Name);
 
-    setInterval(() => {
-        document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div > span").innerHTML = ("남은 시간(ms) : " + (tgtDate.getTime() - (new Date()).getTime()).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
-    }, 100);
+    //setInterval(() => {
+    //    document.querySelector("#content > div.subPageContainer.container.clear > div.sub-Right > div > span").innerHTML = ("남은 시간(ms) : " + (tgtDate.getTime() - (new Date()).getTime()).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
+    //}, 100);
 }
 
 chrome.runtime.onMessage.addListener(
@@ -124,9 +125,9 @@ chrome.runtime.onMessage.addListener(
     document.querySelector(".sub-Right h3").insertAdjacentHTML(
         "afterend",
         `
-        <td><a class="macro-button" id="macro_ready" href="#">메크로준비</a></td>
-        <td><a class="macro-button" id="macro_start" href="#">메크로시작</a></td>
-        <td><a class="macro-button" id="macro_move_cart" href="https://songdo.ysfsmc.or.kr/application/cart.asp">장바구니로</a></td>
+        <td><a class="macro-button" id="macro_ready" href="#">1.메크로준비</a></td>
+        <td><a class="macro-button" id="macro_start" href="#">2.메크로시작</a></td>
+        <td><a class="macro-button" id="macro_move_cart" href="https://songdo.ysfsmc.or.kr/application/cart.asp">3.장바구니로</a></td>
         `
     );
 
