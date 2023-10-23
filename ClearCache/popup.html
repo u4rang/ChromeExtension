@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>도메인 캐시 및 쿠키 삭제</title>
+
+        <style>
+ /* 팝업 페이지 전체 스타일 */
+body {
+    width: 200px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 도메인 입력란 스타일 */
+#domainInput {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* 삭제 버튼 스타일 */
+#deleteButton {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* 삭제 버튼 호버 스타일 */
+#deleteButton:hover {
+    background-color: #0055a5;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>도메인 캐시 및 쿠키 삭제</h1>
+        <input type="text" id="domainInput" placeholder="도메인을 입력하세요">
+        <button id="deleteButton">삭제</button>
+
+        <!-- 팝업 페이지에서 사용할 JavaScript 파일을 연결할 수 있습니다. -->
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "도메인 캐시 및 쿠키 삭제 익스텐션",
+    "version": "1.0",
+    "description": "특정 도메인에 대한 캐시와 쿠키를 삭제하는 크롬 익스텐션입니다.",
+    "permissions": [
+      "activeTab",
+      "cookies",
+      "browsingData",
+      "storage"
+    ],
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "16": "images/icon16.png",
+          "48": "images/icon48.png",
+          "128": "images/icon128.png"
+        }
+    }
+}
+  
