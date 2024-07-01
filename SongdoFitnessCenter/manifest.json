@@ -7,10 +7,11 @@
     "permissions" : [
         "storage",
         "activeTab",
-        "nativeMessaging",
-        "https://songdo.ysfsmc.or.kr/"
+        "nativeMessaging"
     ],
-
+    "host_permissions": [
+        "https://songdo.ysfsmc.or.kr/*"
+    ],
     "action" : {
         "default_icon" : "icon.png",
         "icon" : "icon.png",
