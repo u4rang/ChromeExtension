@@ -4,6 +4,9 @@
     const MSG_SAVE_FAIL = "저장에 실패하였습니다.";
 
     const init = () => {
+        chrome.storage.local.get('Songdo_time', function (item) {
+            document.getElementById('time').value = item.Songdo_time.value;
+        });
         chrome.storage.local.get('Songdo_subject1', function (item) {
             document.getElementById('subject1').value = item.Songdo_subject1.value;
         });
@@ -13,9 +16,12 @@
     }
 
     const save = () => {
+        const time = document.getElementById('time').value;
         const subject1 = document.getElementById('subject1').value;
         const subject2 = document.getElementById('subject2').value;
         try{
+            chrome.storage.local.set({'Songdo_time': {value: time}}, function() {
+            });
             chrome.storage.local.set({'Songdo_subject1': {value: subject1}}, function() {
             });
             chrome.storage.local.set({'Songdo_subject2': {value: subject2}}, function() {
@@ -27,9 +33,11 @@
     }
 
     const reset = () => {
+        document.getElementById('time').value = '';
         document.getElementById('subject1').value = '';
         document.getElementById('subject2').value = '';
 
+        chrome.storage.local.remove(['Songdo_time'], (result) => {});
         chrome.storage.local.remove(['Songdo_subject1'], (result) => {});
         chrome.storage.local.remove(['Songdo_subject2'], (result) => {});
 
