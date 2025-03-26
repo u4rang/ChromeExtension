@@ -13,7 +13,7 @@ let subjects = {
     "010000011" : "수영/화목/중급/07시",
     "010000049" : "수영/화목/상급/06시",
     "010000050" : "수영/화목/상급/07시",
-    "010000018" : "수영/월수금/고급/06시",
+    "010000001" : "수영/월수금/고급/06시",
     "010000007" : "수영/월수금/고급/07시",
     "010000002" : "수영/월수금/연수/06시",
     "010000008" : "수영/월수금/연수/07시",
@@ -222,4 +222,5 @@ const addCart = (bascd, g_idx, YyMm, target_cd, gubun, qty) => {
     });
 }
 
+// https://songdo.ysfsmc.or.kr/application/applicationView.asp?idx=010000070&target=01&bascd=01
 // https://songdo.ysfsmc.or.kr/application/applicationList.asp?bascd=03&scitem=030002
